@@ -50,7 +50,10 @@ def RES_to_RIS(df):
         AUlist = []
         for i in range(AUlength):
             name_surname = Authors[i].split(" ")
-            to_output = name_surname[-1] + ", " + name_surname[0]   
+            for j in range(len(name_surname):
+                first_name = name_surname[0]
+                last_name = (' ').join(name_surname)[1:i+1]
+                to_output = last_name + ", " + first_name  
             AUi = AU + to_output
             AUlist.append(AUi)
             spam = ('\n').join(AUlist)
