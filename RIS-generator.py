@@ -89,6 +89,7 @@ data = st.file_uploader("Upload your RES export file",
                        key = '1')
 if data is not None:
     RES_df = pd.read_excel(data, header=[0])
+    RES_df["OSTIID"] = RES_df["OSTIID"].astype(str)
     RES_df = RES_df.fillna('')
     #display dataframe of uploaded DOIs     
     st.dataframe(RES_df)
