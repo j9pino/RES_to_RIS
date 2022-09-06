@@ -50,7 +50,7 @@ def RES_to_RIS(df):
         AUlist = []
         for i in range(AUlength):
             name_surname = Authors[i].split(" ")
-            for j in range(len(name_surname):
+            for j in range(len(name_surname)):
                 first_name = name_surname[0]
                 last_name = (' ').join(name_surname[1:i+1])
                 to_output = last_name + ", " + first_name  
