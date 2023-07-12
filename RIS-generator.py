@@ -14,7 +14,7 @@ tmp = tempfile.NamedTemporaryFile('w+t', encoding = 'utf-8-sig')
 # Declare the name of the temporary file
 tmp.name="RES-to-RIS-Generator.RIS"
 
-@st.experimental_memo(suppress_st_warning=True)
+@st.experimental_memo(experimental_allow_widgets=True)
 def RES_to_RIS(df):
     for line in range(len(df)):
         if df.iloc[line]['Communication Type'] == 'Journal':
